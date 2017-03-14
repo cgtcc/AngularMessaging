@@ -1,0 +1,12 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <div class="panel panel-heading">Post a message...</div>
+  <div class="panel-body">
+    <textarea ng-model="main.message" class="form-control custom-control" rows=3 style="resize:now"></textarea>
+    <span class="input-group-addon btn btn-primary" ng-click="main.postMessage()">Post</span>
+  </div>
+</div>
