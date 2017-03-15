@@ -6,7 +6,6 @@ export function CompareToDirective($parse) {
             var mainModel = $parse(attrs.compareTo);
             var secondModel = $parse(attrs.ngModel);
 
-            //watch for changes in the 2 password input fields            
             scope.$watch(attrs.ngModel, function (newValue) {
                 ngModel.$setValidity(attrs.name, newValue === mainModel(scope));
             });
@@ -14,11 +13,6 @@ export function CompareToDirective($parse) {
             scope.$watch(attrs.compareTo, function (newValue) {
                 ngModel.$setValidity(attrs.name, newValue === secondModel(scope));
             });
-
-
-
-
-
         }
     }
 }
